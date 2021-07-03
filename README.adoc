@@ -1,0 +1,4 @@
+== Howto run
+
+* Start mysql - `./run_and_monitor_db.sh`
+* Run tests and learn
