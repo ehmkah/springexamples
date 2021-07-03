@@ -4,23 +4,14 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "artifact")
-@IdClass(ArtifactId.class)
 public class Artifact {
 
     @Id
-    @Column(name = "groupid")
-    private String groupId;
-
-    @Id
-    @Column(name = "artifactid")
-    private String artifactId;
+    @Column(name = "artifact_name")
+    private String artifactName;
 
 
-    public void setGroupId(String groupId) {
-        this.groupId = groupId;
-    }
-
-    public void setArtifactId(String artifactId) {
-        this.artifactId = artifactId;
+    public void setArtifactName(String artifactId) {
+        this.artifactName = artifactId;
     }
 }

@@ -16,8 +16,7 @@ public class DummyService {
      */
     public void write() {
         Artifact artifact = new Artifact();
-        artifact.setGroupId("de.ehmkah");
-        artifact.setArtifactId("krausse");
+        artifact.setArtifactName("krausse");
         artifactRepository.save(artifact);
 
     }

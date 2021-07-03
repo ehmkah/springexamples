@@ -1,7 +1,5 @@
-package de.ehmkah.projects.springexamlples;
+package de.ehmkah.projects.springexamlples.persistence;
 
-import de.ehmkah.projects.springexamlples.persistence.Artifact;
-import de.ehmkah.projects.springexamlples.persistence.ArtifactRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,8 +21,7 @@ public class ArtifactRepositoryTest {
     void assuresSaveIsWorking() {
         // GIVEN
         Artifact givenArtifact = new Artifact();
-        givenArtifact.setGroupId("de.ehmkah");
-        givenArtifact.setArtifactId("springexample");
+        givenArtifact.setArtifactName("springexample");
 
         // WHEN
         sut.save(givenArtifact);

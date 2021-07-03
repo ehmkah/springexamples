@@ -1,8 +1,7 @@
 CREATE table artifact
 (
-    groupid    varchar(255),
-    artifactid varchar(255),
-    PRIMARY KEY (groupid, artifactid)
+    artifact_name varchar(255),
+    PRIMARY KEY (artifact_name)
 );
 
 CREATE table dependency
