@@ -1,0 +1,1 @@
+CREATE table artifact (groupid varchar(255));

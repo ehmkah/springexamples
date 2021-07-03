@@ -1,0 +1,3 @@
+== Howto run
+
+* start mysql - `docker-compose.yml up -d db`
