@@ -32,7 +32,7 @@ class DummyServiceTest {
         // WHEN
         sut.write();
         // THEN
-        Assertions.assertEquals(1, artifactRepository.count());
+        Assertions.assertEquals(2, artifactRepository.count());
         Assertions.assertEquals(1, dependencyRepository.count());
     }
 }

@@ -21,9 +21,10 @@ public class DummyService {
      * Writes in the database some stuff
      */
     public void write() {
-        Artifact artifact = new Artifact();
-        artifact.setArtifactName("krausse");
-        artifactRepository.save(artifact);
+        var artifact1 = new Artifact("artifact1");
+        artifactRepository.save(artifact1);
+        var artifact2 = new Artifact("artifact2");
+        artifactRepository.save(artifact2);
 
         Dependency dependency = new Dependency("artifact1", "artifact2", "dependsOn");
 
