@@ -11,5 +11,8 @@ CREATE table dependency
     direction   varchar(255),
     description varchar(255),
 
-    PRIMARY KEY (artifact1, artifact2, direction)
+    PRIMARY KEY (artifact1, artifact2, direction),
+    FOREIGN KEY (artifact1) REFERENCES artifact(artifact_name),
+    FOREIGN KEY (artifact2) REFERENCES artifact(artifact_name)
+
 );

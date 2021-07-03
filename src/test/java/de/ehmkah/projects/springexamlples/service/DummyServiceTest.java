@@ -22,8 +22,8 @@ class DummyServiceTest {
 
     @BeforeEach
     void setUp() {
-        artifactRepository.deleteAll();
         dependencyRepository.deleteAll();
+        artifactRepository.deleteAll();
     }
 
     @Test
