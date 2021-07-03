@@ -1,6 +1,7 @@
 package de.ehmkah.projects.springexamlples.service;
 
 import de.ehmkah.projects.springexamlples.persistence.ArtifactRepository;
+import de.ehmkah.projects.springexamlples.persistence.DependencyRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,9 +17,13 @@ class DummyServiceTest {
     @Autowired
     ArtifactRepository artifactRepository;
 
+    @Autowired
+    DependencyRepository dependencyRepository;
+
     @BeforeEach
     void setUp() {
         artifactRepository.deleteAll();
+        dependencyRepository.deleteAll();
     }
 
     @Test
@@ -28,5 +33,6 @@ class DummyServiceTest {
         sut.write();
         // THEN
         Assertions.assertEquals(1, artifactRepository.count());
+        Assertions.assertEquals(1, dependencyRepository.count());
     }
 }
