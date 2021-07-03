@@ -24,6 +24,7 @@ public class ArtifactRepositoryTest {
         // GIVEN
         Artifact givenArtifact = new Artifact();
         givenArtifact.setGroupId("de.ehmkah");
+        givenArtifact.setArtifactId("springexample");
 
         // WHEN
         sut.save(givenArtifact);
