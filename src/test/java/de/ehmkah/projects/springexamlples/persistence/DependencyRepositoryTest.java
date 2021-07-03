@@ -1,6 +1,7 @@
 package de.ehmkah.projects.springexamlples.persistence;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,6 +11,11 @@ class DependencyRepositoryTest {
 
     @Autowired
     DependencyRepository sut;
+
+    @BeforeEach
+    void setUp() {
+        sut.deleteAll();
+    }
 
     @Test
     void assureWriteDependecyWorks() {
